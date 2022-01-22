@@ -1,0 +1,61 @@
+.prodInfo{
+    border-top: 3px solid rgb(228, 202, 202);
+}
+
+.prodLabel{
+    font-size: 16px;
+    color: grey;
+    cursor: pointer;
+}
+
+.prodLabel:hover{
+    font-size: 16px;
+    color: skyblue;
+    text-decoration: underline;
+}
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 2%;
+    border: 1px solid gray;
+}
+.active-color {
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 6%;
+    border: 2px solid gray;
+    outline: 2px solid skyblue;
+}
+.prodRating{
+    height: 25px;
+    font-size: 10px;
+    color: rgb(172, 114, 8);
+    margin-left: -10px;
+    line-height: 100%;
+    padding: 5px;
+    outline: 1px dotted navy;
+    border: 1px dashed black;
+}
+.prodRating-number{
+    font-size: 14px;
+    color: orange;
+}
+
+.addCart_btn{
+    width: auto;
+    height: auto   ;
+    background-color: rgb(107, 161, 24);
+    color: white;
+    font-weight:500;
+    font-size: 16px;
+    float: right;
+    border-radius: 5%;
+}
+
+.addCart_btn:hover{
+    outline: 2px solid gainsboro;
+}

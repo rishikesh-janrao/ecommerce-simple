@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of productList">
+    <div class="card h-100" [ngStyle]="{'outline': '1px solid grey', 'border': '2px solid skyblue'}">
+      <a routerLink="product/{{product.id}}"><img class="card-img-top" style=" height: 300px; overflow: hidden;" src="{{product.productImg}}" alt=""></a>
+      <div class="card-body prodInfo">
+        <h5 class="card-title">
+          <a routerLink="product/{{product.id}}"><label class="prodLabel">{{ product.productName }}</label></a>
+        </h5>
+        <div style=" width: 150px;">
+          <span class="dot" (click)="changeColor(color)" [ngClass]="{'active-color':color == activeColor}"
+           [ngStyle]="{'background-color':color+''}" *ngFor="let color of product.color"></span>&nbsp;
+        </div>
+        <h5>{{ product.price | currency:'INR' }}</h5>
+        
+        <p class="card-text">{{ product.description}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><label class="prodRating">
+          <label class="prodRating-number">{{ product.rating}}</label>/5 <p style="font-size: 20px; float: right; padding-left: 3px;">★</p></label>
+          <button class="addCart_btn">+</button>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- /.row -->
