@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of productList">
     <div class="card h-100" [ngStyle]="{'outline': '1px solid grey', 'border': '2px solid skyblue'}">
-      <a routerLink="product/{{product.id}}"><img class="card-img-top" style=" height: 300px; overflow: hidden;" src="{{product.productImg}}" alt=""></a>
+      <a routerLink="product/{{product.id}}" style=" height: 300px; width: auto; overflow: hidden;"><img class="card-img-top" src="{{product.productImg}}" alt=""></a>
       <div class="card-body prodInfo">
         <h5 class="card-title">
           <a routerLink="product/{{product.id}}"><label class="prodLabel">{{ product.productName }}</label></a>
@@ -25,5 +25,12 @@
       </div>
     </div>
   </div>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" (click)="handlePagination(-1)"><a class="page-link">Previous</a></li>
+      <li class="page-item" *ngFor="let num of pages" (click)="handlePagination(num)"><a class="page-link">{{num}}</a></li>
+      <li class="page-item" (click)="handlePagination(-2)"><a class="page-link">Next</a></li>
+    </ul>
+  </nav>
 </div>
   <!-- /.row -->

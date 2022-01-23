@@ -12,7 +12,7 @@ export class UpdateProductComponent implements OnInit {
 
   productId = 0;
 
-  productDetails!: Product;
+  productDetails!: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private productsService: ProductsService
@@ -23,8 +23,7 @@ export class UpdateProductComponent implements OnInit {
       this.productId = data['id'];
 
       this.productsService.viewProduct(this.productId).subscribe(productData => {
-        this.productDetails = productData; // get the existing data of the product
-        console.log(this.productDetails);
+        this.productDetails = productData!;
       });
 
     });
@@ -32,13 +31,12 @@ export class UpdateProductComponent implements OnInit {
 
   updateProduct(form:any){
     const updateProduct = {
-      id: form.value.id,
       categoryId: form.value.categoryId,
       productName: form.value.productName,
       description: form.value.description,
       rating: form.value.product_rating,
       price: form.value.product_price,
-      productImg: '',
+      productImg: this.productDetails.productImg,
       isAvailable: form.value.product_available == 1,
       color: form.value.product_color,
       reviews: form.value.product_category,

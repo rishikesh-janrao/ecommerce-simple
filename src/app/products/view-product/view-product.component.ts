@@ -10,13 +10,11 @@ import { Product } from '../product';
 })
 export class ViewProductComponent implements OnInit {
 
-  productId = 0;
-  productDetails!: Product;
+  productId:number = 0;
+  productDetails!: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private productsService: ProductsService) { }
-
-    c1 = 'c1';
 
   ngOnInit(): void {
 
@@ -25,7 +23,7 @@ export class ViewProductComponent implements OnInit {
     });
 
     this.productsService.viewProduct(this.productId).subscribe(productData => {
-      this.productDetails = productData;
+      this.productDetails = productData!;
     });
   }
 

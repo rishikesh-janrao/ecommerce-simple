@@ -4,6 +4,7 @@ import { ListOrdersComponent } from './orders/list-orders/list-orders.component'
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 const routes: Routes = [
+  { path: '', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   { path: 'orders', component: ListOrdersComponent}
 
