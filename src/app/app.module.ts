@@ -18,7 +18,7 @@ import { SiteFrameworkModule } from './site-framework/site-framework.module';
     OrdersModule,
     SiteFrameworkModule,
     FormsModule,
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

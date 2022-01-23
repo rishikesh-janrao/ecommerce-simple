@@ -17,7 +17,10 @@
       <div class="card-footer">
         <small class="text-muted"><label class="prodRating">
           <label class="prodRating-number">{{ product.rating}}</label>/5 <p style="font-size: 20px; float: right; padding-left: 3px;">★</p></label>
-          <button class="addCart_btn">+</button>
+          <div class="flt_right">
+            <a href="#/products/update-product/{{product.id}}"><span class="material-icons green-color addCart_btn">edit</span></a>
+            <span class="material-icons green-color addCart_btn" (click)="deleteProduct(product)">delete</span>
+          </div>
         </small>
       </div>
     </div>

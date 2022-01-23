@@ -7,7 +7,6 @@ import { CreateProductComponent } from './create-product/create-product.componen
 import { ViewProductComponent } from './view-product/view-product.component';
 import { ViewAllProductsComponent } from './view-all-products/view-all-products.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
-import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -18,7 +17,6 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
     ViewProductComponent,
     ViewAllProductsComponent,
     UpdateProductComponent,
-    DeleteProductComponent,
   ],
   imports: [
     CommonModule,

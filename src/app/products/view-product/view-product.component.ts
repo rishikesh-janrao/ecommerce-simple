@@ -29,5 +29,6 @@ export class ViewProductComponent implements OnInit {
     });
   }
 
+  
 
 }

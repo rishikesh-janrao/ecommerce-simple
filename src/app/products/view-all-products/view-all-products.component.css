@@ -46,16 +46,28 @@
 }
 
 .addCart_btn{
-    width: auto;
-    height: auto   ;
-    background-color: rgb(107, 161, 24);
-    color: white;
-    font-weight:500;
-    font-size: 16px;
-    float: right;
+    width: 40px;
+    height: 30px;
+    background-color: whitesmoke;
+    color: black;
     border-radius: 5%;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: auto;
+    padding-top: 3%;
+    cursor: pointer;
 }
 
 .addCart_btn:hover{
-    outline: 2px solid gainsboro;
+    outline: 2px solid skyblue;
+    background-color: white;
+}
+
+.flt_left{
+    float: left;
+}
+
+.flt_right{
+    float: right;
+    margin-right: -20px;
 }

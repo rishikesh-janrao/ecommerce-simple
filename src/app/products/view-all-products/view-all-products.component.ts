@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { Product } from '../product';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-all-products',
@@ -11,7 +12,7 @@ export class ViewAllProductsComponent implements OnInit {
 
   productList!: any;
   activeColor:String = "";
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.productsService.getAllProducts().subscribe(data=> {
@@ -22,6 +23,12 @@ export class ViewAllProductsComponent implements OnInit {
 
   changeColor(color:String){
     this.activeColor = color;
+  }
+
+  deleteProduct(product:Product){
+      this.productsService.deleteProduct(product.id).subscribe(deleteddata=>{
+        this.ngOnInit();
+      })
   }
 
 
